@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+
+
+  position:
+    build: homework6
+    restart: always
+    volumes:
+      - /Desktop/homework6
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: yaroslavshymgb@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "8080:80"
